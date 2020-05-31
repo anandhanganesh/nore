@@ -1,0 +1,17 @@
+{
+  "name": "node-request",
+  "version": "1.0.0",
+  "description": "Generalized Http/Https Requester using native node modules",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node index.js"
+  },
+  "author": "Anandhan.J.G",
+  "license": "MIT",
+  "dependencies": {
+    "file-type": "^14.5.0",
+    "follow-redirects": "^1.11.0",
+    "mime-types": "^2.1.27"
+  }
+}
