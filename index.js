@@ -117,8 +117,6 @@ const Requester=(method,myUrl,content,headers,cb)=>{
         });
         res.on('error',(error)=>{cb(error)});
     }
-    
-    console.log({protocol,method,hostname,port,path,headers});
 
     const request=(protocol==='https:')?https.request(requestOptions,callback):http.request(requestOptions,callback);
 
