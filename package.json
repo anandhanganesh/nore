@@ -7,11 +7,25 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anandhanganesh/node-request.git"
+  },
   "author": "Anandhan.J.G",
   "license": "MIT",
   "dependencies": {
     "file-type": "^14.5.0",
     "follow-redirects": "^1.11.0",
     "mime-types": "^2.1.27"
-  }
+  },  
+  "keywords": [
+    "http-request",
+    "https-request",
+    "request",
+    "requester"
+  ],
+  "bugs": {
+    "url": "https://github.com/anandhanganesh/node-request/issues"
+  },
+  "homepage": "https://github.com/anandhanganesh/node-request#readme"
 }
