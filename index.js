@@ -3,7 +3,6 @@ const fileType=require('file-type');
 const mime=require('mime-types');
 const zlib=require('zlib');
 const {http,https}=require('follow-redirects');
-
 const defaultPort=80;
 const defaultProtocol='http:';
 
@@ -97,7 +96,10 @@ const Requester=(method,myUrl,content,headers,cb)=>{
         port,
         path,
         headers,
-        auth
+    }
+
+    if(auth){
+        requestOptions.auth=auth;
     }
 
     var response={
