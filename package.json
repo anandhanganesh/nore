@@ -12,7 +12,7 @@
     "url": "git+https://github.com/anandhanganesh/node-request.git"
   },
   "author": "Anandhan.J.G",
-  "license": "MIT",
+  "license": "ISC",
   "dependencies": {
     "file-type": "^14.5.0",
     "follow-redirects": "^1.11.0",
