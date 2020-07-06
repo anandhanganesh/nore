@@ -1,6 +1,6 @@
 {
-  "name": "nore",
-  "version": "0.0.1",
+  "name": "postkaran-request",
+  "version": "0.0.3",
   "description": "Generalized Http/Https Requester using native node modules",
   "main": "index.js",
   "scripts": {

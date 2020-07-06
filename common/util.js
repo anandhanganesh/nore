@@ -17,20 +17,21 @@ const unCompressData=(data,contentEncode)=>{
     }
 }
 
+const slicePath=(sliceString)=>{
+    var splitedParts=sliceString.split('/');
+    if(splitedParts.length>1)
+        return [splitedParts[0],'/'+(splitedParts.splice(1).join('/'))];
+    else
+        return [splitedParts[0],'/'];
+}
 module.exports={
     unCompressData,
-    slicePath:(sliceString)=>{
-        var splitedParts=sliceString.split('/');
-        if(splitedParts.length>1)
-            return [splitedParts[0],'/'+(splitedParts.splice(1).join('/'))];
-        else
-            return [splitedParts[0],'/'];
-    },
+    slicePath,
     getProtocolFromString:(urlString)=>{
         var urlParts=urlParser.parse(urlString);
         const {protocol,port,hostname,path,pathname,search,auth}=urlParts;
         if(!protocol && !port){
-                const [host,path]=this.slicePath(pathname);
+                const [host,path]=slicePath(pathname);
             return [DEFAULT_PROTOCOL,DEFAULT_PORT,host,search?path+search:path,auth];
         }else if(protocol!=='http:' && protocol!=='https:'){
             return [DEFAULT_PROTOCOL,hostname||DEFAULT_PORT,protocol.replace(':',''),path,auth];

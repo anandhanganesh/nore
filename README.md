@@ -1,26 +1,28 @@
-NORE-BETA 0.0.1
+<pre>
+POSTKARAN-REQUEST-BETA 0.0.1
 A SIMPLIFIED NODE HTTP/HTTPS REQUESTER USING NATIVE NODE MODULES
 CAN BE USED ALL NODE AND NODE LIKE PROJECTS
 
 Install
-npm i nore
+npm i postkaran-request
 
 Usage
-nore(method,url,contentType,content,headers).then(res=>{
+var pk=require('postkaran-request');
+pk(method,url,contentType,content,headers).then(res=>{
     console.log(res)
 }).catch(err=>{
     console.log(err)
 });
 
 Usage With Promise
-nore.get(url,headers).then(res=>{
+pk.get(url,headers).then(res=>{
     console.log(res);
 }).catch(err=>{
     console.log(err);
 });
 
 Usage With Callback
-nore.post(url,contentType,content,headers,(err,res)=>{
+pk.post(url,contentType,content,headers,(err,res)=>{
     if(err)
         console.log(err);
     else
@@ -28,19 +30,19 @@ nore.post(url,contentType,content,headers,(err,res)=>{
 });
 
 Example:
-nore('GET','https://www.google.com','text/plain','',{},(err,res)=>{
+pk('GET','https://www.google.com','text/plain','',{},(err,res)=>{
     if(err)
         console.log(err);
     else
         console.log(res);
 });
 
-Allowed nore Methods
-nore.get
-nore.post
-nore.delete
-nore.put
-nore.head
+Allowed pk Methods
+pk.get
+pk.post
+pk.delete
+pk.put
+pk.head
 
 method - HTTP METHODS i.e.,GET,POST,PUT,DELETE,HEAD
 url -  Request Url
@@ -76,3 +78,4 @@ response-->
         status - status sent from server,
         viewable - says data is viewable or not,
         fileExtension - says the type of data is return for 'text/html' fileExtension-'html'
+</pre>
