@@ -3,46 +3,71 @@ POSTKARAN-REQUEST-BETA 0.0.1
 A SIMPLIFIED NODE HTTP/HTTPS REQUESTER USING NATIVE NODE MODULES
 CAN BE USED ALL NODE AND NODE LIKE PROJECTS
 
-Install
-npm i postkaran-request
+## Installation 
 
-Usage
+This is a [Node.js](https://nodejs.org/en/) module available through the
+[npm registry](https://www.npmjs.com/).
+
+```bash
+$ npm i postkaran-request
+```
+
+# Usage
+
+### Include
+
+```js
 var pk=require('postkaran-request');
+```
+### Simple Usage
+
+```js
 pk(method,url,contentType,content,headers).then(res=>{
     console.log(res)
 }).catch(err=>{
     console.log(err)
 });
+```
 
-Usage With Promise
+### Usage With Promise
+
+```js
 pk.get(url,headers).then(res=>{
     console.log(res);
 }).catch(err=>{
     console.log(err);
 });
+```
 
-Usage With Callback
+### Usage With Callback
+
+```js
 pk.post(url,contentType,content,headers,(err,res)=>{
     if(err)
         console.log(err);
     else
         console.log(res);
 });
+```
 
-Example:
+## Example:
+
+```js
 pk('GET','https://www.google.com','text/plain','',{},(err,res)=>{
     if(err)
         console.log(err);
     else
         console.log(res);
 });
+```
 
-Allowed pk Methods
-pk.get
-pk.post
-pk.delete
-pk.put
-pk.head
+## Allowed Postkaran Methods
+
+- get
+- post
+- delete
+- put
+- head
 
 method - HTTP METHODS i.e.,GET,POST,PUT,DELETE,HEAD
 url -  Request Url
