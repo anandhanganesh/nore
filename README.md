@@ -1,5 +1,5 @@
-<pre>
-POSTKARAN-REQUEST-BETA 0.0.1
+## POSTKARAN-REQUEST (Version : BETA-0.0.1)
+
 A SIMPLIFIED NODE HTTP/HTTPS REQUESTER USING NATIVE NODE MODULES
 CAN BE USED ALL NODE AND NODE LIKE PROJECTS
 
@@ -103,4 +103,4 @@ response-->
         status - status sent from server,
         viewable - says data is viewable or not,
         fileExtension - says the type of data is return for 'text/html' fileExtension-'html'
-</pre>
+
