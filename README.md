@@ -16,12 +16,12 @@ $ npm i postkaran-request
 ### Include
 
 ```js
-var pk=require('postkaran-request');
+var postKaran=require('postkaran-request');
 ```
 ### Simple Usage
 
 ```js
-pk(method,url,contentType,content,headers).then(res=>{
+postKaran(method,url,contentType,content,headers).then(res=>{
     console.log(res)
 }).catch(err=>{
     console.log(err)
@@ -31,7 +31,7 @@ pk(method,url,contentType,content,headers).then(res=>{
 ### Usage With Promise
 
 ```js
-pk.get(url,headers).then(res=>{
+postKaran.get(url,headers).then(res=>{
     console.log(res);
 }).catch(err=>{
     console.log(err);
@@ -41,7 +41,7 @@ pk.get(url,headers).then(res=>{
 ### Usage With Callback
 
 ```js
-pk.post(url,contentType,content,headers,(err,res)=>{
+postKaran.post(url,contentType,content,headers,(err,res)=>{
     if(err)
         console.log(err);
     else
@@ -52,7 +52,7 @@ pk.post(url,contentType,content,headers,(err,res)=>{
 ## Example:
 
 ```js
-pk('GET','https://www.google.com','text/plain','',{},(err,res)=>{
+postKaran('GET','https://www.google.com','text/plain','',{},(err,res)=>{
     if(err)
         console.log(err);
     else
