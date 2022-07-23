@@ -14,7 +14,7 @@
   "author": "Anandhan.J.G",
   "license": "ISC",
   "dependencies": {
-    "file-type": "^14.5.0",
+    "file-type": "^16.5.4",
     "follow-redirects": "^1.11.0",
     "form-data": "^3.0.0",
     "mime-types": "^2.1.27",
